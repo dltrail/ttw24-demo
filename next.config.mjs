@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
+export const images = {
+  remotePatterns: [
+    {
+      protocol: "https",
+      hostname: "media.umbraco.io",
+      port: "",
+      pathname: "**",
+    },
+  ],
 };
-
-export default nextConfig;
