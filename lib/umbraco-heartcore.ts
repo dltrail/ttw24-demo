@@ -5,13 +5,13 @@ type Header = {
     'Umb-Project-Alias': string
 }
 
-async function fetchAPI(query: string, { variables}:any = {}) {
+async function fetchAPI(query: string, { variables }: any = {}) {
     const res = await fetch("https://graphql.umbraco.io", {
         method: "POST",
-        headers:{
-                'Content-Type': 'application/json',
-                'Api-Key': '8TzZfqrJH1Yhz9PRlCUi',
-                'Umb-Project-Alias': process.env.UMBRACO_PROJECT_ALIAS,
+        headers: {
+            'Content-Type': 'application/json',
+            'Api-Key': process.env.UMBRACO_API_KEY,
+            'Umb-Project-Alias': process.env.UMBRACO_PROJECT_ALIAS,
         } as Header,
         body: JSON.stringify({
             query,
@@ -38,7 +38,11 @@ export async function getHomePage() {
         bodyCopy
         exploreCopy
         image{
-        url
+            url
+            crops {
+                width
+                height
+            }
         }
         }
     }
