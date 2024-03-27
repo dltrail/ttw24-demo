@@ -1,10 +1,11 @@
 type ContainerProps = {
   children: JSX.Element | JSX.Element[]
+  className?: string
 }
 
-export default function Layout({children}:ContainerProps) {
+export default function Layout({children, className}:ContainerProps) {
   return (
-      <div className="container">
+      <div className={className}>
         {children}
       </div>
   );
