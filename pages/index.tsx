@@ -28,9 +28,9 @@ export default function Home({ homepage }: any) {
 
           {/* #TODO: needs major refactor */}
             <TwoColumnBlock col1={blocks[0].content.col1} col2={blocks[0].content.col2} />
-            <div style={{ position: 'relative' }}>
+            <div style={{ position: 'relative', maxWidth: '462px', maxHeight:'540px', width: '100%', height:'100%', marginInline:'auto'}}>
               <Image
-                src={image[0].url}
+                src={image.url}
                 alt="Picture of the author"
                 quality={60}
                 priority
@@ -39,8 +39,8 @@ export default function Home({ homepage }: any) {
                   width: '100%',
                   height: 'auto',
                 }}
-                width={image[0].crops[0].width}
-                height={image[0].crops[0].height}
+                width={100}
+                height={100}
               />
             </div>
           </section>

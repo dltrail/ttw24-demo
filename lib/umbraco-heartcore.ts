@@ -51,13 +51,13 @@ export async function getHomePage() {
                     }
                 }
                 exploreCopy
-                image{
-                    url
-                    crops {
-                        width
-                        height
-                    }
-                }
+               image{
+           url
+          ... on Image{
+            umbracoWidth
+            umbracoHeight
+          }
+        }
                 }
             }
         }  
