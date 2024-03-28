@@ -1,6 +1,8 @@
 /* #TODO: Custom components so not restricted to Umbraco ones */
 body {
   margin: 0;
+  font-family: bold;
+  font-family: Arial, Helvetica, sans-serif
 }
 
 .main-content {
@@ -36,3 +38,8 @@ p.proto-description__sub-heading {
     }
   }
 }
+
+  footer{
+  background-color: black;
+  color: white;
+      padding: 38px 48px;}
