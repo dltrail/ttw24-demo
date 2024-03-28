@@ -1,10 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Inter } from "next/font/google";
 import styles from "@/styles/pages/Home.module.scss";
-import Layout from "@/components/layout";
+import Layout from "@/components/Layout/layout";
 import { getHomePage } from "../lib/umbraco-heartcore";
-import Container from "@/components/container";
+import Container from "@/components/Container/container";
 import { TwoColumnBlock2 } from "@/components/TwoColumnBlock/TwoColumnBlock2";
 
 export default function Home({ homepage }: any) {
@@ -16,8 +15,7 @@ export default function Home({ homepage }: any) {
         <Head>
           <title>{title}</title>
         </Head>
-        <Container className={styles.container}>
-
+        <Container>
           <section className={styles.section}>
             <h1 className={styles.header}>{heroText}</h1>
           </section>
@@ -26,8 +24,7 @@ export default function Home({ homepage }: any) {
           </section>
           <section className={styles.section}>
             <TwoColumnBlock2 content={blocks[0].content} />
-
-         <div style={{ position: 'relative', maxWidth: '462px', maxHeight:'540px', width: '100%', height:'100%', marginInline:'auto'}}>
+            <div style={{ position: 'relative', maxWidth: '462px', maxHeight: '540px', width: '100%', height: '100%', marginInline: 'auto' }}>
               <Image
                 src={image.url}
                 alt="Picture of the author"

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
-import Layout from "@/components/layout";
-import Container from "@/components/container";
+import Layout from "@/components/Layout/layout";
+import Container from "@/components/Container/container";
 import styles from "@/styles/pages/Contact.module.scss";
 import { getContactPage } from "../lib/umbraco-heartcore";
 
@@ -13,7 +13,7 @@ export default function contact({ contact }: any) {
                 <Head>
                     <title>{name}</title>
                 </Head>
-                <Container className={styles.container}>
+                <Container>
                     <section className={styles.section}>
                         <h1 className={styles.header}>{pageTitle}</h1>
                     </section>

@@ -1,5 +1,8 @@
 /* #TODO: Custom components so not restricted to Umbraco ones */
+body{
+margin: 0;}
 
+.main-content{ min-height: 100vh;}
 p.proto-description__sub-heading {
   a {
     display: block;
