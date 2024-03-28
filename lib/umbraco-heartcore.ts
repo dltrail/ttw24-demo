@@ -72,6 +72,16 @@ export async function getContactPage() {
         name
         ... on Contact {
         pageTitle
+        pageIntro
+        sectionTitle
+        bodyCopy
+        image{
+            url
+            ... on Image{
+            umbracoWidth
+            umbracoHeight
+        }
+        }
         }
     }
 }
