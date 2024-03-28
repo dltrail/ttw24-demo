@@ -1,21 +1,21 @@
 // Fetch content by page
 type Header = {
-    'Content-Type': string,
-    'Api-Key': string,
-    'Umb-Project-Alias': string
-}
+    "Content-Type": string;
+    "Api-Key": string;
+    "Umb-Project-Alias": string;
+};
 
 async function fetchAPI(query: string, { variables }: any = {}) {
     const res = await fetch("https://graphql.umbraco.io", {
         method: "POST",
         headers: {
-            'Content-Type': 'application/json',
-            'Api-Key': process.env.UMBRACO_API_KEY,
-            'Umb-Project-Alias': process.env.UMBRACO_PROJECT_ALIAS,
+            "Content-Type": "application/json",
+            "Api-Key": process.env.UMBRACO_API_KEY,
+            "Umb-Project-Alias": process.env.UMBRACO_PROJECT_ALIAS,
         } as Header,
         body: JSON.stringify({
             query,
-            variables
+            variables,
         }),
     });
     const json = await res.json();
@@ -29,21 +29,35 @@ async function fetchAPI(query: string, { variables }: any = {}) {
 
 export async function getHomePage() {
     const data = await fetchAPI(`
-{
-    content(url: "/homepage/") {
-        name
-        ... on Home {
-        title
-        heroText
-        bodyCopy
-        exploreCopy
-        image{
-            url
-            crops {
-                width
-                height
+    {
+        content(url: "/homepage/") {
+                name
+                ... on Home {
+                title
+                heroText
+                bodyCopy
+                exploreCopy
+                image{
+                    url
+                    crops {
+                        width
+                        height
+                    }
+                }
+                }
             }
-        }
+        }  
+`);
+    return data.content;
+}
+
+export async function getContactPage() {
+    const data = await fetchAPI(`
+{
+    content(url: "/homepage/contact") {
+        name
+        ... on Contact {
+        pageTitle
         }
     }
 }
