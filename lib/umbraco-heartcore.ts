@@ -36,6 +36,20 @@ export async function getHomePage() {
                 title
                 heroText
                 bodyCopy
+                blocks{
+                    content{
+                    ... on TwoColumnBlock{
+                    __typename
+                        contentTypeAlias
+                        col1
+                        col2
+                    }
+                    ... on TestElement{
+                        contentTypeAlias
+                        richCol
+                    }
+                    }
+                }
                 exploreCopy
                 image{
                     url
