@@ -1,6 +1,6 @@
 import { ReactElement } from "react"
 import cn from "classnames";
-import styles from "./TwoColumnBlock.module.scss";
+import styles from "./styles/TwoColumnBlock.module.scss";
 
 type TwoColumnBlock = {
     col1: string
