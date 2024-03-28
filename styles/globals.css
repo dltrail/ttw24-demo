@@ -1,8 +1,28 @@
 /* #TODO: Custom components so not restricted to Umbraco ones */
-body{
-margin: 0;}
+body {
+  margin: 0;
+}
 
-.main-content{ min-height: 100vh;}
+.main-content {
+  min-height: 100vh;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  ul {
+    display: flex;
+    gap: 15px;
+    li {
+      list-style: none;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
 p.proto-description__sub-heading {
   a {
     display: block;
@@ -14,6 +34,5 @@ p.proto-description__sub-heading {
       text-underline-offset: 2px;
       text-decoration-color: red;
     }
-  
-}
+  }
 }
