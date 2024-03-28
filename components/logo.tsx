@@ -1,7 +1,8 @@
 export default function Logo() {
   return (
+        // #TODO: optimaise this image for logo - maybe not an SVG?
+
     <div style={{ width: 10 + "em" }}>
-      {/* #TODO: optimaise this image for logo - maybe not an SVG? */}
     <svg
         className="navbar__logo"
         xmlns="http://www.w3.org/2000/svg"
