@@ -1,8 +1,9 @@
 .section {
   display: flex;
   justify-content: space-between;
-  margin-top: 50px;
-  align-items: start;
+  align-items: flex-start;
+  min-height: 100vh;
+
   & > * {
     flex: 1 1 50%;
     text-align: left;
@@ -10,6 +11,7 @@
     max-width: 700px;
     width: 80%;
     align-content: flex-start;
+    min-height: 100vh;
   }
   aside{
       background-color: #F1F1F1;}
