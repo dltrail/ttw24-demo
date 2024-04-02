@@ -4,14 +4,19 @@ import Layout from "@/components/Layout/layout";
 import Container from "@/components/Container/container";
 import styles from "@/styles/pages/Contact.module.scss";
 import { getContactPage } from "../lib/umbraco-heartcore";
+import { ContactType } from "@/types";
 
-export default function contact({ contact }: any) {
+type ContactProps = {
+    contact: ContactType
+};
+
+export default function contact({contact}: ContactProps) {
     const { image, name, pageTitle, pageIntro, sectionTitle, bodyCopy } = contact;
     return (
         <>
             <Layout>
                 <Head>
-                    <title>{name}</title>
+                    <title>contact</title>
                 </Head>
                 <Container>
                     <section className={styles.section}>
