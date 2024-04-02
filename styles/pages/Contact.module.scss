@@ -13,8 +13,9 @@
     align-content: flex-start;
     min-height: 100vh;
   }
-  aside{
-      background-color: #F1F1F1;}
+  aside {
+    background-color: #f1f1f1;
+  }
 }
 
 .header {
@@ -23,7 +24,7 @@
 
 .contact {
   text-align: left;
-    padding: 30px 0;
+  padding: 30px 0;
 
   .label {
     font-size: 1.125rem;
@@ -56,9 +57,11 @@
   padding: 13px 30px;
   font-size: 1.125rem;
   text-transform: uppercase;
-  &:hover, &:focus{
-      background-color: #00441B;
-    border-color: #00441B;
+  &:hover,
+  &:focus {
+    background-color: #00441b;
+    border-color: #00441b;
     cursor: pointer;
-    color: white}
+    color: white;
+  }
 }
