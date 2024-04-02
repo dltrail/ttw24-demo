@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   padding: 10px 20px;
-  color: #fff;
   ul {
     display: flex;
     gap: 60px;
@@ -11,16 +10,17 @@
       a {
         text-decoration: none;
         color: #000;
+        font-weight: normal;
         cursor: pointer;
         &:focus, &:hover{
-                    text-decoration: underline;
+            text-decoration: underline;
 
         }
         &.disabled{
             color: grey;
-           &:focus, &:hover{
-            text-decoration:none;
-           }
+          &:focus, &:hover{
+          text-decoration:none;
+          }
         }
       }
     }
