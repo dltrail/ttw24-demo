@@ -2,44 +2,90 @@
 body {
   margin: 0;
   font-family: bold;
-  font-family: Arial, Helvetica, sans-serif
+  font-family: Arial, Helvetica, sans-serif;
+}
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 40px;
 }
 
 .main-content {
   min-height: 100vh;
 }
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 20px;
-  ul {
-    display: flex;
-    gap: 15px;
-    li {
-      list-style: none;
-      a {
-        text-decoration: none;
-      }
-    }
+a {
+  display: block;
+  font-weight: bold;
+  font-size: 1.125rem;
+  color: #000;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  text-decoration-color: red;
+  margin-top: 30px;
+  &:hover {
+    color: red;
+    text-decoration-thickness: 2px;
+    text-decoration-color: red;
   }
 }
 
-p.proto-description__sub-heading {
-  a {
-    display: block;
-    font-weight: bold;
-    text-decoration: underline;
-    text-underline-offset: 1px;
-    text-decoration-color: black;
-    &:hover {
-      text-underline-offset: 2px;
-      text-decoration-color: red;
-    }
-  }
-}
-
-  footer{
+footer {
   background-color: black;
   color: white;
-      padding: 38px 48px;}
+  padding: 38px 48px;
+}
+
+/* Text styling */
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 5.25rem;
+}
+
+h2 {
+  font-size: 4.125rem;
+  line-height: 5rem;
+}
+
+@media (max-width: 1600px) {
+  h2 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 1440px) {
+  h2 {
+    font-size: 3.375rem;
+    line-height: 3.75rem;
+  }
+}
+
+@media (max-width: 1170px) {
+  h2 {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+  }
+}
+
+h3 {
+  font-size: 2.125rem;
+  font-weight: 600 !important;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 2rem;
+  line-height: 2.625rem;
+  font-weight: 400;
+}
