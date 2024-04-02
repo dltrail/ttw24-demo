@@ -1,0 +1,28 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  color: #fff;
+  ul {
+    display: flex;
+    gap: 60px;
+    li {
+      list-style: none;
+      a {
+        text-decoration: none;
+        color: #000;
+        cursor: pointer;
+        &:focus, &:hover{
+                    text-decoration: underline;
+
+        }
+        &.disabled{
+            color: grey;
+           &:focus, &:hover{
+            text-decoration:none;
+           }
+        }
+      }
+    }
+  }
+}

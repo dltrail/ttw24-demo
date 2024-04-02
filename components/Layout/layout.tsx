@@ -4,6 +4,7 @@ import Meta from "../Meta/Meta";
 import Footer from "../Footer/Footer";
 import Container from "../Container/container";
 import Link from "next/link";
+import Nav from "../Nav/Nav";
 // import Footer from "../components/footer";
 
 type LayoutProps = {
@@ -14,13 +15,10 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <>
       <Meta />
-      <nav className="nav">
-      <Link href={"/"}><Logo/></Link>
-        <ul>
-          <li><Link href={"contact"}>Contact</Link></li>
-          <li><Link href={"blog"}>Blog</Link></li>
-        </ul>
-      </nav>
+      <header className="site-header">          
+        <Link href={"/"}><Logo /></Link>
+        <Nav />
+      </header>
       <main className="main-content">
         {children}
       </main>
