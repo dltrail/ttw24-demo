@@ -6,7 +6,7 @@ import styles from "@/styles/pages/Contact.module.scss";
 import { getContactPage } from "../lib/umbraco-heartcore";
 
 export default function contact({ contact }: any) {
-    const { name, pageTitle, pageIntro, sectionTitle, bodyCopy } = contact;
+    const { image, name, pageTitle, pageIntro, sectionTitle, bodyCopy } = contact;
     return (
         <>
             <Layout>
@@ -20,6 +20,17 @@ export default function contact({ contact }: any) {
                             <p className={styles.bodyCopy}>{pageIntro}</p>
                             <h2 className={styles.header}>{sectionTitle}</h2>
                             <p className={styles.bodyCopy}>{bodyCopy}</p>
+                            <div style={{ position: 'relative', maxWidth: '304px', maxHeight: 'auto', width: '100%', height: '100%', marginInline: 'auto' }}>
+                                <Image src={image.url} alt={name}
+                                    priority
+                                    sizes="100vw"
+                                    style={{
+                                        width: '100%',
+                                        height: 'auto',
+                                    }}
+                                    width={100}
+                                    height={100} />
+                            </div>
                         </div>
                         <aside>
                             <form className={styles.contact}>
