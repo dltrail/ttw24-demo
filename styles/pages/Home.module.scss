@@ -1,7 +1,33 @@
-.header{
-  color: red
+.section {
+  margin: 0 50px;
+
+&:not(:nth-of-type(2)){
+  margin: 80px 50px;
+}
+}
+.pageHeader{
+    height: 95vh;
+    background-color: blue;
+    position: relative;
+    top: -132px;
+    z-index: -1;
+    }
+
+.header {
+     color: #fff;
+    font-size: 4.625rem;
+    line-height: 4.75rem;
+    max-width: 871px;
+    margin-inline: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
 }
 
-.section{
-  margin: 0 50px;
+.sectionTitle {
+  font-size: 2.5rem !important;
+  font-weight: 400;
+  text-align: center;
 }

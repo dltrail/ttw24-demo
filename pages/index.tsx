@@ -8,7 +8,6 @@ import { TwoColumnBlock2 } from "@/components/TwoColumnBlock/TwoColumnBlock2";
 
 export default function Home({ homepage }: any) {
   const { title, heroText, bodyCopy, exploreCopy, image, blocks } = homepage;
-
   return (
     <>
       <Layout>
@@ -16,18 +15,16 @@ export default function Home({ homepage }: any) {
           <title>{title}</title>
         </Head>
         <Container>
-          <section className={styles.section}>
+          <section className={styles.pageHeader}>
             <h1 className={styles.header}>{heroText}</h1>
           </section>
-          <section className={styles.section}>
-            <div dangerouslySetInnerHTML={{ __html: bodyCopy }} />
-          </section>
+          <section className={styles.section}dangerouslySetInnerHTML={{ __html: bodyCopy }} />
           <section className={styles.section}>
             <TwoColumnBlock2 content={blocks[0].content} />
             <div style={{ position: 'relative', maxWidth: '462px', maxHeight: '540px', width: '100%', height: '100%', marginInline: 'auto' }}>
               <Image
                 src={image.url}
-                alt="Picture of the author"
+                alt="hero image"
                 quality={60}
                 priority
                 sizes="100vw"
@@ -40,9 +37,7 @@ export default function Home({ homepage }: any) {
               />
             </div>
           </section>
-          <section className={styles.section}>
-            <div dangerouslySetInnerHTML={{ __html: exploreCopy }} />
-          </section>
+          <section className={styles.section} dangerouslySetInnerHTML={{ __html: exploreCopy }}/>
         </Container>
       </Layout>
     </>
