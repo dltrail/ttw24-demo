@@ -1,6 +1,6 @@
 import { ReactElement } from "react"
 import cn from "classnames";
-import styles from "./styles/TwoColumnBlock.module.scss";
+import styles from "./TwoColumnBlock.module.scss";
 
 type Content = {
   __typename: string
