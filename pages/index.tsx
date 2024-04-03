@@ -20,7 +20,7 @@ export default function Home({ homepage }: any) {
           </section>
           <section className={styles.section}dangerouslySetInnerHTML={{ __html: bodyCopy }} />
           <section className={styles.section}>
-            <TwoColumnBlock2 content={blocks[0].content} />
+            {/* <TwoColumnBlock2 content={blocks[0].content} /> */}
             <div style={{ position: 'relative', maxWidth: '462px', maxHeight: '540px', width: '100%', height: '100%', marginInline: 'auto' }}>
               <Image
                 src={image.url}
