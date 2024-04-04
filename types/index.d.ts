@@ -1,4 +1,4 @@
-=export type ContactType {
+export type ContactType ={
     bodyCopy: string,
     image: Media, 
     name: string, 
