@@ -1,34 +1,34 @@
 // Fetch content by page
 type Header = {
-    "Content-Type": string;
-    "Api-Key": string;
-    "Umb-Project-Alias": string;
+  "Content-Type": string;
+  "Api-Key": string;
+  "Umb-Project-Alias": string;
 };
 
 async function fetchAPI(query: string, { variables }: any = {}) {
-    const res = await fetch("https://graphql.umbraco.io", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            "Api-Key": process.env.UMBRACO_API_KEY,
-            "Umb-Project-Alias": process.env.UMBRACO_PROJECT_ALIAS,
-        } as Header,
-        body: JSON.stringify({
-            query,
-            variables,
-        }),
-    });
-    const json = await res.json();
+  const res = await fetch("https://graphql.umbraco.io", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Api-Key": process.env.UMBRACO_API_KEY,
+      "Umb-Project-Alias": process.env.UMBRACO_PROJECT_ALIAS,
+    } as Header,
+    body: JSON.stringify({
+      query,
+      variables,
+    }),
+  });
+  const json = await res.json();
 
-    if (json.errors) {
-        console.error(json.errors);
-        throw new Error("Failed to fetch API");
-    }
-    return json.data;
+  if (json.errors) {
+    console.error(json.errors);
+    throw new Error("Failed to fetch API");
+  }
+  return json.data;
 }
 
 export async function getHomePage() {
-    const data = await fetchAPI(`
+  const data = await fetchAPI(`
     {
         content(url: "/homepage/") {
                 name
@@ -37,22 +37,22 @@ export async function getHomePage() {
                 heroText
                 bodyCopy
                 exploreCopy
-               image{
-           url
-          ... on Image{
-            umbracoWidth
-            umbracoHeight
+                image{
+          url
+            ... on Image{
+              umbracoWidth
+              umbracoHeight
+            }
           }
         }
-                }
-            }
-        }  
+    }
+}
 `);
-    return data.content;
+  return data.content;
 }
 
 export async function getContactPage() {
-    const data = await fetchAPI(`
+  const data = await fetchAPI(`
 {
     content(url: "/homepage/contact") {
         name
@@ -72,5 +72,91 @@ export async function getContactPage() {
     }
 }
 `);
-    return data.content;
+  return data.content;
 }
+
+export async function getAllPostsWithSlug() {
+  const data = await fetchAPI(`
+    {
+      allPost {
+        edges {
+          node {
+            slug:url
+          }
+        }
+      }
+    }
+  `);
+  return data.allPost.edges.map((x: any) => x.node);
+}
+
+export async function getAllPosts() {
+  const data = await fetchAPI(
+    `
+    query ($preview: Boolean) {
+      allPost(first: 20, orderBy: [date_DESC], preview: $preview) {
+        edges {
+          node {
+            id
+            title:name
+            slug:url
+            excerpt
+            date
+            coverImage {
+              url(width: 2000, height: 1000, cropMode: CROP, upscale: true)
+            }
+            author {
+              ...on Author {
+                name
+                picture {
+                  url(width: 100, height: 100, cropMode: CROP, upscale: true)
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `
+  );
+  return data.allPost.edges.map((e: any) => e.node);
+}
+
+export async function getPost(slug: any) {
+  const data = await fetchAPI(
+    `
+      query PostBySlug {
+            post(url: "/posts/${slug}") {
+              title:name
+              slug:url
+              content:bodyText
+              date
+              ogImage: coverImage {
+                  url(width: 2000, height: 1000, cropMode: CROP, upscale: true)
+              }
+              coverImage {
+                  url(width: 2000, height: 1000, cropMode: CROP, upscale: true)
+              }
+              author {
+                ...on Author {
+                  name
+                  picture {
+                    url(width: 100, height: 100, cropMode: CROP, upscale: true)
+                  }
+                }
+              }
+            }
+      }
+  `,
+    {
+      variables: {
+        slug: `/posts/${slug}/`,
+      },
+    }
+  );
+  return {
+    post: data.post
+  };
+}
+
+
