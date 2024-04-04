@@ -1,6 +1,6 @@
 import Container from "@/components/Container/container";
 import Layout from "@/components/Layout/layout";
-import { getAllPostsWithSlug, getPost, getAllPosts } from "@/lib/umbraco-heartcore";
+import { getAllPostsWithSlug, getPost } from "@/lib/umbraco-heartcore";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
