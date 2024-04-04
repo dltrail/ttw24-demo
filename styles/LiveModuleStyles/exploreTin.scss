@@ -1,0 +1,330 @@
+
+            .explore-tinnovation {
+                padding: 95px 0
+            }
+
+            @media all and (max-width: 767px) {
+                .explore-tinnovation {
+                    padding:80px 0 0
+                }
+            }
+
+            .explore-tinnovation--title {
+                font-size: 3.375rem;
+                font-weight: 500;
+                letter-spacing: 0;
+                line-height: 3.125rem;
+                margin-bottom: 45px;
+                color: #071d3d;
+                text-align: center
+            }
+
+            @media all and (max-width: 767px) {
+                .explore-tinnovation--title {
+                    font-size:1.75rem;
+                    line-height: 2.125rem;
+                    margin-bottom: 19px
+                }
+            }
+
+            .explore-tinnovation--steps {
+                overflow: hidden
+            }
+
+              .explore-tinnovation--steps ul {
+                padding: 0;
+                margin: 0;
+                display: flex;
+            }
+
+            .explore-tinnovation--steps ul:before,.explore-tinnovation--steps ul:after {
+                content: "";
+                display: table;
+                clear: both
+            }
+
+            .explore-tinnovation--steps ul li {
+                float: left;
+                text-align: center;
+                background-color: #071d3d;
+                padding: 40px 0 50px;
+                position: relative;
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 562px;
+                flex-direction: column
+            }
+
+            @media all and (max-width: 1024px) {
+                .explore-tinnovation--steps ul li {
+                    height:auto
+                }
+            }
+
+            .explore-tinnovation--steps ul li:after {
+                content: "";
+                position: absolute;
+                right: -160px;
+                top: 0;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 281px 0 281px 160px;
+                border-color: transparent transparent transparent #071d3d
+            }
+
+            @media all and (max-width: 1424px) {
+                .explore-tinnovation--steps ul li:after {
+                    border-width:281px 0 281px 100px;
+                    right: -100px
+                }
+            }
+
+            @media all and (max-width: 1024px) {
+                .explore-tinnovation--steps ul li:after {
+                    border-width:150px 512px 0 512px;
+                    top: auto;
+                    bottom: -140px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    border-color: #071d3d transparent transparent transparent
+                }
+            }
+
+            @media all and (max-width: 767px) {
+                .explore-tinnovation--steps ul li:after {
+                    border-width:140px 384px 0 384px;
+                    bottom: -139px
+                }
+            }
+
+            .explore-tinnovation--steps ul li .step-number {
+                font-size: 1.5rem;
+                font-weight: 500;
+                letter-spacing: 0
+            }
+
+            .explore-tinnovation--steps ul li .step-title {
+                font-size: 2.1875rem;
+                font-weight: 500;
+                letter-spacing: 0;
+                line-height: 3.125rem
+            }
+
+            .explore-tinnovation--steps ul li .step-image {
+                margin: 20px auto 40px;
+                min-height: 250px
+            }
+
+            @media all and (max-width: 1024px) {
+                .explore-tinnovation--steps ul li .step-image {
+                    min-height:none
+                }
+            }
+
+            .explore-tinnovation--steps ul li .step-image img {
+                max-width: 100%;
+                display: block
+            }
+
+            .explore-tinnovation--steps ul li .step-button {
+                padding: 11px 45px
+            }
+
+            .explore-tinnovation--steps ul li:first-child {
+                z-index: 3;
+                width: 25%;
+                padding-left: 40px;
+                padding-right: 40px
+            }
+
+            @media all and (max-width: 1424px) {
+                .explore-tinnovation--steps ul li:first-child {
+                    width:19%;
+                    padding-right: 10px
+                }
+            }
+
+            @media all and (max-width: 1024px) {
+                .explore-tinnovation--steps ul li:first-child {
+                    width:100%;
+                    padding: 40px 0 10px
+                }
+            }
+
+            .explore-tinnovation--steps ul li:first-child .step-number {
+                color: #00d857
+            }
+
+            .explore-tinnovation--steps ul li:first-child .step-title {
+                color: #ffffff
+            }
+
+            .explore-tinnovation--steps ul li:first-child .step-button {
+                color: #ffffff;
+                border-color: #ffffff
+            }
+
+            .explore-tinnovation--steps ul li:first-child .step-button:hover {
+                background-color: #ffffff;
+                color: #000000
+            }
+
+            .explore-tinnovation--steps ul li:nth-child(2) {
+                background-color: #cad8f9;
+                z-index: 2;
+                width: 27%;
+                padding-left: 200px
+            }
+
+            @media all and (max-width: 1424px) {
+                .explore-tinnovation--steps ul li:nth-child(2) {
+                    padding-left:140px
+                }
+            }
+
+            @media all and (max-width: 1024px) {
+                .explore-tinnovation--steps ul li:nth-child(2) {
+                    width:100%;
+                    padding: 190px 0 10px
+                }
+            }
+
+            @media all and (max-width: 767px) {
+                .explore-tinnovation--steps ul li:nth-child(2) {
+                    padding:160px 0 5px
+                }
+            }
+
+            .explore-tinnovation--steps ul li:nth-child(2):after {
+                border-color: transparent transparent transparent #cad8f9
+            }
+
+            @media all and (max-width: 1024px) {
+                .explore-tinnovation--steps ul li:nth-child(2):after {
+                    border-color:#cad8f9 transparent transparent transparent
+                }
+            }
+
+            .explore-tinnovation--steps ul li:nth-child(2) .step-number {
+                color: #0044db
+            }
+
+            .explore-tinnovation--steps ul li:nth-child(2) .step-title {
+                color: #071d3d
+            }
+
+            .explore-tinnovation--steps ul li:nth-child(2) .step-button {
+                color: #071d3d;
+                border-color: #071d3d
+            }
+
+            .explore-tinnovation--steps ul li:nth-child(2) .step-button:hover {
+                background-color: #071d3d;
+                color: #ffffff
+            }
+
+            .explore-tinnovation--steps ul li:nth-child(3) {
+                background-color: #0044db;
+                z-index: 1;
+                padding-left: 200px;
+                width: 27%
+            }
+
+            @media all and (max-width: 1424px) {
+                .explore-tinnovation--steps ul li:nth-child(3) {
+                    padding-left:140px
+                }
+            }
+
+            @media all and (max-width: 1024px) {
+                .explore-tinnovation--steps ul li:nth-child(3) {
+                    width:100%;
+                    padding: 190px 0 10px
+                }
+            }
+
+            @media all and (max-width: 767px) {
+                .explore-tinnovation--steps ul li:nth-child(3) {
+                    padding:160px 0 5px
+                }
+            }
+
+            .explore-tinnovation--steps ul li:nth-child(3):after {
+                border-color: transparent transparent transparent #0044db
+            }
+
+            @media all and (max-width: 1024px) {
+                .explore-tinnovation--steps ul li:nth-child(3):after {
+                    border-color:#0044db transparent transparent transparent
+                }
+            }
+
+            .explore-tinnovation--steps ul li:nth-child(3) .step-number {
+                color: #00d857
+            }
+
+            .explore-tinnovation--steps ul li:nth-child(3) .step-title {
+                color: #ffffff
+            }
+
+            .explore-tinnovation--steps ul li:nth-child(3) .step-button {
+                color: #ffffff;
+                border-color: #ffffff
+            }
+
+            .explore-tinnovation--steps ul li:nth-child(3) .step-button:hover {
+                background-color: #ffffff;
+                color: #000000
+            }
+
+            .explore-tinnovation--steps ul li:nth-child(4) {
+                background-color: #00d857;
+                width: 25%;
+                padding-left: 200px;
+                padding-right: 20px
+            }
+
+            @media all and (max-width: 1424px) {
+                .explore-tinnovation--steps ul li:nth-child(4) {
+                    padding-left:120px;
+                    width: 27%
+                }
+            }
+
+            @media all and (max-width: 1024px) {
+                .explore-tinnovation--steps ul li:nth-child(4) {
+                    width:100%;
+                    padding: 190px 0 60px
+                }
+            }
+
+            @media all and (max-width: 767px) {
+                .explore-tinnovation--steps ul li:nth-child(4) {
+                    padding:160px 0 60px
+                }
+            }
+
+            .explore-tinnovation--steps ul li:nth-child(4):after {
+                content: none
+            }
+
+            .explore-tinnovation--steps ul li:nth-child(4) .step-number {
+                color: #0044db
+            }
+
+            .explore-tinnovation--steps ul li:nth-child(4) .step-title {
+                color: #071d3d
+            }
+
+            .explore-tinnovation--steps ul li:nth-child(4) .step-button {
+                color: #071d3d;
+                border-color: #071d3d
+            }
+
+            .explore-tinnovation--steps ul li:nth-child(4) .step-button:hover {
+                background-color: #071d3d;
+                color: #ffffff
+            }

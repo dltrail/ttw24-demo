@@ -9,8 +9,8 @@ export default function Nav() {
           <li><Link href={"#"} className={styles.disabled}>About Us</Link></li>
           <li><Link href={"#"} className={styles.disabled}>What we do</Link></li>
           <li><Link href={"#"} className={styles.disabled}>Work</Link></li>
-          <li><Link href={"blog"}>Insights</Link></li>
-          <li><Link href={"contact"}>Contact</Link></li>
+          <li><Link href={"/posts"}>Insights</Link></li>
+          <li><Link href={"/contact"}>Contact</Link></li>
         </ul>
       </nav>
   );
