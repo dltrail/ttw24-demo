@@ -97,26 +97,18 @@ export async function getAllPosts() {
       allPost(first: 20, orderBy: [date_DESC], preview: $preview) {
         edges {
           node {
-            id
-            title:name
             slug:url
-            excerpt
+            summaryTitle
             date
+            readTime
+            tags
             coverImage {
               url(width: 2000, height: 1000, cropMode: CROP, upscale: true)
             }
-            author {
-              ...on Author {
-                name
-                picture {
-                  url(width: 100, height: 100, cropMode: CROP, upscale: true)
-                }
-              }
-            }
-          }
         }
       }
     }
+  }
   `
   );
   return data.allPost.edges.map((e: any) => e.node);
@@ -127,23 +119,16 @@ export async function getPost(slug: any) {
     `
       query PostBySlug {
             post(url: "/posts/${slug}") {
-              title:name
               slug:url
+              title:name
+              authorName
               content:bodyText
               date
-              ogImage: coverImage {
-                  url(width: 2000, height: 1000, cropMode: CROP, upscale: true)
-              }
+                          readTime
+
+              tags
               coverImage {
                   url(width: 2000, height: 1000, cropMode: CROP, upscale: true)
-              }
-              author {
-                ...on Author {
-                  name
-                  picture {
-                    url(width: 100, height: 100, cropMode: CROP, upscale: true)
-                  }
-                }
               }
             }
       }
