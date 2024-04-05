@@ -4,20 +4,23 @@ import moment from "moment";
 import { longDateFormat } from "@/lib/constants";
 import Image from "next/image";
 import classNames from "classnames";
+import ArticleTag from "../ArticleTag/ArticleTag";
 
 type PostPageProps = {
   post: Post
 }
 export default function PostContent({ post }: PostPageProps) {
-const {   authorName, id, title, date, readTime, coverImage, content} = post
-const {url} = coverImage
+  const { authorName, title, date, readTime, coverImage, tags, content } = post
+  const { url } = coverImage
   return (
     <>
       {/* Blog Header section */}
       <section className={classNames(styles.titleBlock, styles.section)}>
-        <span className={styles.tag}>
-          {post.tags}
-        </span>
+        <>
+          {tags && <>
+            {tags.map((tag) => (<ArticleTag tag={tag} />))}
+          </>}
+        </>
         <h1>{title}</h1>
       </section>
 
