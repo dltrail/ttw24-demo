@@ -1,0 +1,32 @@
+.Link {
+  display: block;
+  font-weight: bold;
+  font-size: 1.125rem;
+  color: #000;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  text-decoration-color: red;
+  margin-top: 30px;
+
+    &:hover,  &:focus {
+    color: red;
+    text-decoration-thickness: 2px;
+    text-decoration-color: inherit;
+  }
+}
+
+.inText {
+  color: #000;
+}
+
+.tinnovation {
+  color: #000;
+  text-decoration-color: green;
+   &:hover,  &:focus {
+      color: green;
+   }
+}
+
+.nav{
+color: initial;}
