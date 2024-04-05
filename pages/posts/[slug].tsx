@@ -1,11 +1,13 @@
 import Container from "@/components/Container/container";
 import Layout from "@/components/Layout/layout";
-import { getAllPostsWithSlug, getPost, getAllPosts } from "@/lib/umbraco-heartcore";
+import { getAllPostsWithSlug, getPost } from "@/lib/umbraco-heartcore";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import styles from "@/styles/pages/postFull.module.scss"
-
+import moment from "moment";
+import { longDateFormat } from "@/lib/constants";
+import Image from "next/image";
 
 export default function PostFull({ post }: any) {
     const router = useRouter();
@@ -25,15 +27,28 @@ export default function PostFull({ post }: any) {
                 ) : (
                     <>
                         <Link className={styles.backLink} href="/posts">Back to Posts</Link>
-
                         <article className={styles.blogPost}>
                             <section className={styles.titleBlock}>  <span className={styles.tag}>
                                 Insights
                             </span>
                                 <h1>{post.title}</h1>
                             </section>
-                            <div className={styles.blogHeader}> <span>{post.author.name}</span> | <span>Date Posted</span></div>
-                            <img src={post.coverImage.url} width="100%" />
+                            <div className={styles.blogHeader}>
+                                <span>By {post.authorName}</span>
+                                <span>{moment(post.date).utc().format(longDateFormat)}</span>
+                                <span>{post.readTime} minute read</span>
+                            </div>
+                            <div style={{ position: 'relative', width: '100%', height: '100%', marginInline: 'auto' }}>
+                        
+                                <Image src={post.coverImage.url} alt={post.title} quality={60} priority sizes="100vw" 
+                                style={{
+                                    width: '100%',
+                                    height: 'auto',
+                                }}
+                                    width={100}
+                                    height={100}
+                                />
+                            </div>
                             <section className={styles.content} dangerouslySetInnerHTML={{ __html: post.content }} />
                         </article>
                     </>

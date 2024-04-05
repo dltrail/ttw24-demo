@@ -1,21 +1,42 @@
 .post {
-    text-align: left;
-    width: 100%;
-        margin-bottom: 40px;
-    @media screen and (min-width: 768px) {
-        width: calc(50% - 10px);
-    }
-    @media screen and (min-width: 1400px) {
-        width: calc(33.15% - 10px);
-    }
-    // Make first two posts bigger
-    &:nth-child(1),
-    &:nth-child(2) {
-            margin-bottom: 80px;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    width: calc(50% - 10px);
+  }
+  @media screen and (min-width: 1400px) {
+    width: calc(33.15% - 10px);
+  }
+  // Make first two posts bigger
+  &:nth-child(1),
+  &:nth-child(2) {
+    margin-bottom: 80px;
 
-        @media screen and (min-width: 768px) {
-            width: 100%;
-            width: calc(50% - 10px);
-        }
+    @media screen and (min-width: 768px) {
+      width: 100%;
+      width: calc(50% - 10px);
     }
+  }
+}
+
+.title {
+  text-wrap: balance;
+  margin: 20px 0;
+    font-weight: 900;
+
+}
+
+.previewMeta {
+  display: flex;
+  > p {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    margin-right: 20px;
+  }
+}
+
+.date {
+  color: rgb(117, 117, 117);
 }

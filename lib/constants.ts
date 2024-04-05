@@ -1,0 +1,1 @@
+export const longDateFormat = 'Do MMMM YY'
