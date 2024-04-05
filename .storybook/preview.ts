@@ -8,6 +8,9 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    options: {
+      storySort: ["Atoms", "Molecules", "Examples"]
+    }
   },
 };
 

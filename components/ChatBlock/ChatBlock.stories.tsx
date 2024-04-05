@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import ChatBlock from './ChatBlock';
 
 const meta = {
-  title: 'Example/ChatBlock',
+  title: 'Molecules/ChatBlock',
   component: ChatBlock,
   parameters: {
     layout: 'centered',

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import ArticleTag from './ArticleTag';
 
 const meta = {
-  title: 'Atom/ArticleTag',
+  title: 'Atoms/ArticleTag',
   component: ArticleTag,
   parameters: {
     layout: 'centered',
