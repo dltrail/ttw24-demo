@@ -22,7 +22,6 @@ export default function Home({ homepage }: any) {
           </section>
           <section className={styles.section}dangerouslySetInnerHTML={{ __html: bodyCopy }} />
           <section className={styles.section}>
-            <TwoColumnBlock2 content={blocks[0].content} />
             <div style={{ position: 'relative', maxWidth: '462px', maxHeight: '540px', width: '100%', height: '100%', marginInline: 'auto' }}>
               <Image
                 src={image.url}
@@ -41,8 +40,7 @@ export default function Home({ homepage }: any) {
           </section>
           <section className={styles.section} dangerouslySetInnerHTML={{ __html: exploreCopy }}/>
           <ExploreTinnovation/>
-                      <ChatBlock Title={blocks[1].content.title} BodyCopy={blocks[1].content.bodyCopy} CtaText={blocks[1].content.ctaText} CtaUrl={blocks[1].content} ColorVariation={"Blue"} />
-
+          <ChatBlock data={blocks[1].content} />
         </Container>
       </Layout>
     </>

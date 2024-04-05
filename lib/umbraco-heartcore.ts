@@ -60,7 +60,7 @@ export async function getHomePage() {
               type
               name
             }
-            ctaText
+            colour
           }
           }
         }
