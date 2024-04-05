@@ -38,12 +38,32 @@ export async function getHomePage() {
                 bodyCopy
                 exploreCopy
                 image{
-          url
-            ... on Image{
-              umbracoWidth
-              umbracoHeight
+                url
+                  ... on Image{
+                    umbracoWidth
+                    umbracoHeight
+                  }
+                }
+                 blocks{
+         content{
+            ... on TwoColumnBlock{
+              contentTypeAlias
+              __typename
+              col1
+              col2
             }
+          ... on ChatBlock {
+            title
+             bodyCopy
+            cta {
+              url
+              type
+              name
+            }
+            ctaText
           }
+          }
+        }
         }
     }
 }
