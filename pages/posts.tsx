@@ -18,8 +18,8 @@ export default function Posts({ posts }: BlogsProps) {
             </Head>
             <Container>
                 <section className={styles.posts}>
-                    {posts.map((post: Post) => (
-                        <PostPreview post={post} key={post.id} />
+                    {posts.map((post: Post, i:number) => (
+                        <PostPreview post={post} key={i} />
                     ))}
                 </section>
             </Container>

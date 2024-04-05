@@ -14,6 +14,7 @@ export type Media = {
 };
 
 export type Post = {
+    [x: string]: string | TrustedHTML;
     id: number
     slug: string
     name: string

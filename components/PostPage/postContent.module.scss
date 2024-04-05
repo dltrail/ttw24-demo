@@ -1,0 +1,98 @@
+.backLink {
+    margin: 20px 50px;
+}
+
+// .blogPost {
+//     margin: 70px auto;
+
+//     h1 {
+//         font-family: "GT Sectra Fine";
+//         text-align: center;
+//         margin: 60px 0 30px;
+//     }
+
+//     h2 {
+//         font-size: 2.1875rem;
+//         font-weight: 300;
+//         letter-spacing: 0;
+//         line-height: 2.625rem;
+//         text-align: left;
+//         color: #FF2222;
+//         font-family: "GT Sectra Fine";
+//     }
+// }
+
+
+.titleBlock {
+    text-align: center;
+}
+
+.tag {
+    color: red;
+    border: 1px solid red;
+    padding: 3px 26px;
+    border-radius: 100px;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1.75rem;
+
+}
+
+.blogHeader {
+    display: flex;
+    gap: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    justify-content: center;
+    margin: 60px 0;
+    text-align: center;
+
+
+    span:not(:last-of-type) {
+        &:after {
+            content: "|";
+            margin-left: 20px;
+        }
+    }
+}
+
+.blogContent {
+    max-width: 800px;
+    margin: 80px auto;
+// Overwrite umbraco styling 
+// #TODO: - needs reconsidering
+    p,
+    ul {
+        font-weight: 400;
+        font-size: 1.25rem;
+        line-height: 1.875rem;
+    }
+
+    ul {
+        padding: 0;
+        list-style-position: inside;
+    }
+
+    a {
+        display: inline;
+    }
+
+    img {
+        width: 100%
+    }
+
+     h1{
+    font-family: "GT Sectra Fine";
+    text-align: center;
+    margin: 60px 0 30px;}
+    h2{
+    font-size: 2.1875rem;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 2.625rem;
+    text-align: left;
+    color: #FF2222;
+    font-family: "GT Sectra Fine";}
+
+}
