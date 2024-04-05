@@ -14,7 +14,6 @@ export type Media = {
 };
 
 export type Post = {
-    [x: string]: string | TrustedHTML;
     id: number
     slug: string
     name: string
@@ -25,4 +24,6 @@ export type Post = {
     coverImage: Media
     tags: string[]
     readTime: Number
+    content: string | TrustedHTML
+    tag: string
 }
