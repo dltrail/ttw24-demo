@@ -22,7 +22,7 @@ export const Default: Story = {
       date: '2024-03-25T00:00:00Z',
       coverImage: {
         url: 'https://thetin.net/media/rpxiqfrt/decode-thumb.png',
-        umbracoWidth: '400',
+        umbracoWidth: '638px',
         umbracoHeight: 'auto'
       },
       tags: ['Insights'],

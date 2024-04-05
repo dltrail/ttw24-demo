@@ -4,10 +4,20 @@
   margin-bottom: 40px;
 }
 
+.link {
+  text-decoration: none;
+  &:hover, &:focus{
+    text-decoration: underline;
+    text-decoration-color: red;
+  }
+}
+
 .title {
   text-wrap: balance;
   margin: 20px 0;
     font-weight: 900;
+    font-size: 38px;
+    color: black;
 
 }
 
