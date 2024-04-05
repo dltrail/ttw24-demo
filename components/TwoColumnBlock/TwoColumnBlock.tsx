@@ -10,7 +10,6 @@ type TwoColumnBlock = {
 
 export function TwoColumnBlock({col1, col2, className}:TwoColumnBlock) {
   return (
-    // #TODO: add classname detail to docs 
     <div className={cn(`${className? className: ""}`,`${styles.twoColumnBlock}`
       )}><p>{col1}</p>
         <p>{col2}</p>
