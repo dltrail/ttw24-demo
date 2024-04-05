@@ -13,18 +13,15 @@ export type Media = {
     umbracoHeight: string;
 };
 
-export type Author ={
-    name: string | undefined
-    url: string | URL | undefined
-    picture: Media
-}
-
-export type Post ={
+export type Post = {
     id: number
     slug: string
     name: string
     title: string
-    author: Author
+    summaryTitle: string
+    authorName: string
     date: DateTime
     coverImage: Media
+    tags: string[]
+    readTime: Number
 }
