@@ -22,7 +22,7 @@ function ExploreTinnovation() {
                     </div>
 
                         <div className="step-image">
-                            <img src="/media/uhcfiv0x/radar-simplified.png"/>
+                            <img src="https://thetin.net/media/uhcfiv0x/radar-simplified.png"/>
                         </div>
 
                     <a href="https://www.thetin.net/tinnovation-2/radar/" className="step-button button">
@@ -40,7 +40,7 @@ function ExploreTinnovation() {
                     </div>
 
                         <div className="step-image">
-                            <img src="/media/ybuoxusw/ideation-simplified.png"/>
+                            <img src="https://thetin.net/media/ybuoxusw/ideation-simplified.png"/>
                         </div>
 
                     <a href="https://www.thetin.net/tinnovation-2/ideation/" className="step-button button">
@@ -58,7 +58,7 @@ function ExploreTinnovation() {
                     </div>
 
                         <div className="step-image">
-                            <img src="/media/q5eleqqs/prototyping-simplified.png"/>
+                            <img src="https://thetin.net/media/q5eleqqs/prototyping-simplified.png"/>
                         </div>
 
                     <a href="https://www.thetin.net/tinnovation-2/prototyping/" className="step-button button">
@@ -76,7 +76,7 @@ function ExploreTinnovation() {
                     </div>
 
                         <div className="step-image">
-                            <img src="/media/o5kdcej3/product-simplified.png"/>
+                            <img src="https://thetin.net/media/o5kdcej3/product-simplified.png"/>
                         </div>
 
                     <a href="https://www.thetin.net/tinnovation-2/product/" className="step-button button">
