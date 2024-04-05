@@ -1,0 +1,82 @@
+.chatBlock{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    padding: 100px 0;
+}
+
+.Blue {
+    color:  #0044DB;
+    background-color: #CAD8F9;
+       .chatBlockLink {
+        border: 1.5px solid #0044DB;
+        color: #0044DB;
+
+        &:focus, &:hover{
+            background-color:  #0044DB;
+        } 
+    }
+}
+.Yellow {
+    color: #000;
+    background-color: #ffe9ca;
+      .chatBlockLink {
+        border: 1.5px solid #000;
+        color: #000;
+
+        &:focus, &:hover{
+            background-color:  #000;
+        } 
+    }
+}
+
+.Red {
+    color: #f22;
+    background-color: #ffe0de;
+
+    .chatBlockLink {
+        border: 1.5px solid #f22;
+        color: #f22;
+        &:focus, &:hover {
+            background-color:  #f22;
+        } 
+    }
+}
+
+.Green {
+    color: #00441B;
+    background-color: #BCEDBC;
+    .chatBlockLink {
+        border: 1.5px solid #00441B;
+        color: #00441B;
+
+        &:focus, &:hover{
+            background-color:  #00441B;
+        } 
+    }
+}
+
+.chatBlockTitle{
+    font-size: 54px;
+    margin: 0;
+}
+.chatBlockBody{
+    font-size: 18px;
+    max-width: 60%;
+    margin-inline: auto;
+    text-align: center;
+    margin: 40px;
+    color: #000;
+}
+.chatBlockLink{
+    font-size: 18px;
+    display: inline-block;
+    width: auto;
+    text-decoration: none;
+    padding: 13px 30px;
+    font-weight: bold;
+
+    &:focus, &:hover{
+        color: white;
+    } 
+}
