@@ -2,7 +2,6 @@ import { ReactElement, ReactNode } from "react";
 import Logo from "../Logo/logo";
 import Meta from "../Meta/Meta";
 import Footer from "../Footer/Footer";
-import Container from "../Container/container";
 import Link from "next/link";
 import Nav from "../Nav/Nav";
 // import Footer from "../components/footer";
