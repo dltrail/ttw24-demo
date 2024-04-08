@@ -2,7 +2,7 @@
     margin: 20px 50px;
 }
 
-.titleBlock {
+.titleBlock{
     text-align: center;
 }
 
@@ -36,43 +36,43 @@
     }
 }
 
+// #TODO: Need better way to templete blog posts
+
 .blogContent {
-    max-width: 800px;
-    margin: 80px auto;
-// Overwrite umbraco styling 
-// #TODO: - needs reconsidering
-    p,
-    ul {
-        font-weight: 400;
-        font-size: 1.25rem;
-        line-height: 1.875rem;
+    max-width: 819px;
+    margin: 0 auto 60px;
+  
+    p, ul{
+      font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    a{
+    display: inline;}
     }
+    
+h2 {
+    margin: 30px 0 50px;
+    font-family: 'GT Sectra Fine Book';
+font-size: 2.1875rem;    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 6rem;
+    color: #FF2222;
 
-    ul {
-        padding: 0;
-        list-style-position: inside;
+
+
+@media (max-width: 767px) {
+        font-size:2.25rem;
+        line-height: 2.5rem
     }
-
-    a {
-        display: inline;
-    }
-
-    img {
-        width: 100%;
-        height: auto;
-    }
-
-     h1{
-    font-family: "GT Sectra Fine";
-    text-align: center;
-    margin: 60px 0 30px;}
-    h2{
+}
+ h3 {
+    max-width: 819px;
     font-size: 2.1875rem;
     font-weight: 300;
     letter-spacing: 0;
     line-height: 2.625rem;
     text-align: left;
     color: #FF2222;
-    font-family: "GT Sectra Fine";}
-
+    font-family: "GT Sectra Fine";
+}
 }
