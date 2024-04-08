@@ -53,6 +53,8 @@ export async function getHomePage() {
               col2
             }
           ... on ChatBlock {
+              contentTypeAlias
+              __typename
             title
              bodyCopy
             cta {

@@ -1,7 +1,7 @@
 import cn from "classnames";
 import styles from "./chatBlock.module.scss";
 
-type Content = {
+type ChatBlockProps = {
     title: string
     bodyCopy: string
     cta: {
@@ -11,13 +11,9 @@ type Content = {
     }
     colour: "Blue" | "Red" | "Yellow" | "Green"
 }
-type ChatBlockProps = {
-    data: Content
-}
 
-export default function ChatBlock({ data }: ChatBlockProps) {
-    const { title, bodyCopy, cta, colour } = data
-    const { name, url } = cta
+export default function ChatBlock({ title, bodyCopy, cta, colour }: ChatBlockProps) {
+const {url, name} = cta
     const styleType = colour;
     return (
         <section className={cn(`${styles.chatBlock}`, `${styles[styleType]}`)}>
