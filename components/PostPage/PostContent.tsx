@@ -18,7 +18,7 @@ export default function PostContent({ post }: PostPageProps) {
       <section className={classNames(styles.titleBlock, styles.section)}>
         <>
           {tags && <>
-            {tags.map((tag) => (<ArticleTag tag={tag} />))}
+            {tags.map((tag, i) => (<ArticleTag key={i} tag={tag} />))}
           </>}
         </>
         <h1>{title}</h1>
