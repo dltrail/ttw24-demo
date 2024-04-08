@@ -1,7 +1,10 @@
-export default function Logo() {
+type LogoProps = {
+fill?: string}
+
+export default function Logo({fill}: LogoProps) {
     return (
         // #TODO: optimaise this image for logo - maybe not an SVG?
-        <div style={{ width: 10 + "em" }}>
+        <div style={{ width: 10 + "em", fill: `${fill}` }}>
             <svg
                 className="navbar__logo"
                 xmlns="http://www.w3.org/2000/svg"
