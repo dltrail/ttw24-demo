@@ -19,6 +19,7 @@ const {url, name} = cta
         <section className={cn(`${styles.chatBlock}`, `${styles[styleType]}`)}>
             <p className={styles.chatBlockTitle}>{title}</p>
             <p className={styles.chatBlockBody}>{bodyCopy}</p>
+            {/* #TODO: use link/button component here */}
             <a className={styles.chatBlockLink} href={url} target={"_blank"}>{name}</a>
         </section>
     )

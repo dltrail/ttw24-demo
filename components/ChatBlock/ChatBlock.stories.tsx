@@ -16,7 +16,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    data: {
       title: "Let's Chat",
       bodyCopy: "We've been building long-term, trusted relationships with our clients for over 20 years. Get in touch to find out how we can help you.",
       colour: "Red",
@@ -25,7 +24,6 @@ export const Default: Story = {
         name: 'Get in Touch',
         target: '_blank'
       }
-    }
   },
 };
 
