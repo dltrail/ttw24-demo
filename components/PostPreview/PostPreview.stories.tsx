@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import PostPreview from './PostPreview';
 
 const meta = {
-  title: 'Example/PostPreview',
+  title: 'Organism/PostPreview',
   component: PostPreview,
   parameters: {
     layout: 'centered',
