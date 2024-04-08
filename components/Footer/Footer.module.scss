@@ -1,7 +1,7 @@
 .footer {
   background-color: #000;
   color: #fff;
-  padding: 20px;
+  padding: 20px 30px;
   width: 100%;
 }
 
@@ -13,6 +13,10 @@
 .footerMain {
   display: flex;
   justify-content: space-between;
+
+  & > div p{
+  font-size: 18px
+  }
 
   & > div:nth-child(1),
   & > div:nth-child(3) {
@@ -29,3 +33,7 @@
     flex: 1 1 33%;
   }
 }
+
+ .copyright{
+  font-size: 18px
+  }

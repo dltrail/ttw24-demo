@@ -14,6 +14,7 @@ export default function Footer() {
                 </div>
                 <div><p>Footer content</p></div>
             </div>
+            <p className={styles.copyright}>copyright</p>
         </footer>
     );
 }
