@@ -4,9 +4,7 @@ import Footer from './Footer';
 const meta = {
   title: 'Molecules/Footer',
   component: Footer,
-  parameters: {
-    layout: 'centered',
-  },
+
   tags: ['autodocs'],
 
 } satisfies Meta<typeof Footer>;

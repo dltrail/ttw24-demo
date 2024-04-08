@@ -4,9 +4,6 @@ import PostPreview from './PostPreview';
 const meta = {
   title: 'Organism/PostPreview',
   component: PostPreview,
-  parameters: {
-    layout: 'centered',
-  },
   tags: ['autodocs'],
 
 } satisfies Meta<typeof PostPreview>;
