@@ -10,17 +10,20 @@
       margin: 80px 240px;
     }
   }
-  h2, h3, p{
+  h2,h3, p{
   text-align: center;
+  }
+  p{
    max-width: 898px;
   margin-inline:auto;}
-
 }
+
 .pageHeader {
   height: 95vh;
   background-color: blue;
   position: relative;
   top: -132px;
+  text-align: center;
   z-index: -1;
 }
 
