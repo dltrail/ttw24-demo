@@ -22,7 +22,7 @@ const data = homepage.blocks
           <section className={styles.pageHeader}>
             <h1 className={styles.header}>{heroText}</h1>
           </section>
-          <section className={styles.section}dangerouslySetInnerHTML={{ __html: bodyCopy }} />
+          <section className={styles.section} dangerouslySetInnerHTML={{ __html: bodyCopy }} />
           <section className={styles.section}>
             <div style={{ position: 'relative', maxWidth: '462px', maxHeight: '540px', width: '100%', height: '100%', marginInline: 'auto' }}>
               <Image
