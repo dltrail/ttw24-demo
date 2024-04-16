@@ -3,7 +3,7 @@ import cn from "classnames";
 import styles from "./TwoColumnBlock.module.scss"
 
 type TwoColumnBlockProps = {
-   col1: string
+  col1: string
   col2: string
   className?: string
 }
