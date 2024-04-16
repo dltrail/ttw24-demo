@@ -1,12 +1,11 @@
 import { ReactElement } from "react"
 import cn from "classnames";
-import styles from "./twoColumnBlock.module.scss"
+import styles from "./TwoColumnBlock.module.scss"
 
 type TwoColumnBlockProps = {
-  // content: Content
-   col1: string
+  col1: string
   col2: string
-  className?: string | undefined
+  className?: string
 }
 
 export function TwoColumnBlock({ col1, col2, className }: TwoColumnBlockProps) {

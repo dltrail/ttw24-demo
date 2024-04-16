@@ -1,0 +1,112 @@
+.informationBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0;
+  margin: 0;
+  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.tinnovation-text-title {
+
+  color: #000;
+  background-color: #ffe9ca;
+  .informationBlockLink {
+    border: 1.5px solid #000;
+    color: #000;
+
+    &:focus,
+    &:hover {
+      background-color: #000;
+    }
+  }
+}
+
+
+.title-only {
+  color: #f22;
+  background-color: #ffe0de;
+
+  .informationBlockLink {
+    border: 1.5px solid #f22;
+    color: #f22;
+    &:focus,
+    &:hover {
+      background-color: #f22;
+    }
+  }
+}
+
+.page-title {
+    font-family: "TTCommons";
+    text-align: center;
+    margin: auto;
+    font-size: 5.25rem;
+    font-weight: 400;
+
+
+@media (max-width: 1440px) {
+        font-size:3.375rem;
+    }
+
+
+@media (max-width: 1024px) {
+        font-size:2.5rem;
+    }
+
+
+@media (max-width: 500px) {
+        font-size:1.75rem;
+    }
+}
+
+ .section-title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+
+
+@media (max-width: 1024px) {
+        font-size:2rem;
+        line-height: 2.625rem;
+    }
+
+
+@media (max-width: 767px) {
+        font-size:1.625rem;
+        line-height: 2.125rem
+    }
+}
+
+.text-title {
+  color: #00441b;
+}
+
+.tinnovation-text-title {
+    font-size: 3.375rem;
+
+
+@media (max-width: 1200px) {
+        grid-column:3 / 22;
+  
+}
+
+@media (max-width: 1026px) {
+        grid-column:2 / 12;
+        font-size: 2.5rem;
+        line-height: 2.75rem;
+
+}
+
+@media (max-width: 767px) {
+        font-size:1.75rem;
+        line-height: 2.125rem;
+    }
+
+
+@media (max-width: 680px) {
+        grid-column:1 / -1;
+    }
+}
+
+

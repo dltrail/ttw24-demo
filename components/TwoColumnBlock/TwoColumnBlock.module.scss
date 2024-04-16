@@ -1,5 +1,11 @@
-.twoColumnBlock{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.twoColumnBlock {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  & > p {
+    flex: 1 1 50%;
+    text-align: center;
+    border: 1px solid blue;
+    padding: 20px;
+  }
 }
