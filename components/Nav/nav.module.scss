@@ -12,16 +12,37 @@
         color: #000;
         font-weight: normal;
         cursor: pointer;
-        &:focus, &:hover{
-            text-decoration: underline;
-
+        &:focus,
+        &:hover {
+          text-decoration: underline;
         }
-        &.disabled{
-            color: grey;
-          &:focus, &:hover{
-          text-decoration:none;
+        &.disabled {
+          color: grey;
+          &:focus,
+          &:hover {
+            text-decoration: none;
           }
         }
+      }
+    }
+  }
+}
+
+.black {
+  ul {
+    li {
+      a {
+        color: #000;
+      }
+    }
+  }
+}
+
+.white {
+  ul {
+    li {
+      a {
+        color: #fff;
       }
     }
   }
